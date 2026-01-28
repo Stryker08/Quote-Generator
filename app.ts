@@ -30,6 +30,7 @@ app.get('/', (request, response) => {
 
 app.get('/getDailyJoke', (request, response) => {
      const randomQuote: Quote = items[Math.floor(Math.random() * items.length)]
+     response.send(randomQuote)
 })
 
 app.listen(3000, () => {
